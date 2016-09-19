@@ -1634,7 +1634,7 @@
 		C835091A1C38706D0027C24C /* SubjectConcurrencyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectConcurrencyTest.swift; sourceTree = "<group>"; };
 		C835091B1C38706D0027C24C /* VariableTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableTest.swift; sourceTree = "<group>"; };
 		C835091C1C38706D0027C24C /* VirtualSchedulerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualSchedulerTest.swift; sourceTree = "<group>"; };
-		C835091D1C38706D0027C24C /* RxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTest.swift; sourceTree = "<group>"; };
+		C835091D1C38706D0027C24C /* RxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxTest.swift; path = Tests/RxTest.swift; sourceTree = "<group>"; };
 		C835091F1C38706E0027C24C /* Foundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
 		C83509201C38706E0027C24C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C83509211C38706E0027C24C /* Recorded+Timeless.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recorded+Timeless.swift"; sourceTree = "<group>"; };
@@ -2406,7 +2406,7 @@
 				C835091C1C38706D0027C24C /* VirtualSchedulerTest.swift */,
 				C86B1E211D42BF5200130546 /* SchedulerTests.swift */,
 			);
-			path = Tests;
+			name = Tests;
 			sourceTree = "<group>";
 		};
 		C835091E1C38706E0027C24C /* Tests */ = {
