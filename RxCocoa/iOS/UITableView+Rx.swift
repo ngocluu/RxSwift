@@ -172,7 +172,7 @@ extension UITableView {
     
     - returns: Instance of delegate proxy that wraps `delegate`.
     */
-    public override func createRxDelegateProxy() -> RxScrollViewDelegateProxy {
+    open override func createRxDelegateProxy() -> RxScrollViewDelegateProxy {
         return RxTableViewDelegateProxy(parentObject: self)
     }
 

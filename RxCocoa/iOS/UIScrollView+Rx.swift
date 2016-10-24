@@ -19,7 +19,7 @@
         /// Factory method that enables subclasses to implement their own `delegate`.
         ///
         /// - returns: Instance of delegate proxy that wraps `delegate`.
-        public func createRxDelegateProxy() -> RxScrollViewDelegateProxy {
+        open func createRxDelegateProxy() -> RxScrollViewDelegateProxy {
             return RxScrollViewDelegateProxy(parentObject: self)
         }
         

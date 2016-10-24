@@ -165,7 +165,7 @@ extension UICollectionView {
     /// Factory method that enables subclasses to implement their own `delegate`.
     ///
     /// - returns: Instance of delegate proxy that wraps `delegate`.
-    public override func createRxDelegateProxy() -> RxScrollViewDelegateProxy {
+    open override func createRxDelegateProxy() -> RxScrollViewDelegateProxy {
         return RxCollectionViewDelegateProxy(parentObject: self)
     }
 

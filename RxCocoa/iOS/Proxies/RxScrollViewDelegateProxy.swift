@@ -14,7 +14,7 @@ import RxSwift
 import UIKit
 
 /// For more information take a look at `DelegateProxyType`.
-public class RxScrollViewDelegateProxy
+open class RxScrollViewDelegateProxy
     : DelegateProxy
     , UIScrollViewDelegate
     , DelegateProxyType {
@@ -73,7 +73,7 @@ public class RxScrollViewDelegateProxy
     // MARK: delegate proxy
 
     /// For more information take a look at `DelegateProxyType`.
-    public override class func createProxyForObject(_ object: AnyObject) -> AnyObject {
+    open override class func createProxyForObject(_ object: AnyObject) -> AnyObject {
         let scrollView: UIScrollView = castOrFatalError(object)
         return scrollView.createRxDelegateProxy()
     }
