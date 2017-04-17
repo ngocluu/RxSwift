@@ -89,6 +89,12 @@ extension Reactive where Base: UITextView {
         
         return ControlProperty(values: source, valueSink: bindingObserver)
     }
+    
+    /// Reactive wrapper for `delegate` message.
+    public var willBeginEditing: ControlEvent<()> {
+        let proxy = RxTextViewDelegateProxy.proxy(for: base)
+        return ControlEvent<()>(events: proxy.beginEditingPublishSubject)
+    }
 
     /// Reactive wrapper for `delegate` message.
     public var didBeginEditing: ControlEvent<()> {

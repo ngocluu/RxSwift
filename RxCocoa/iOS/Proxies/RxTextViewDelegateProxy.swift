@@ -20,6 +20,19 @@ open class RxTextViewDelegateProxy
 
     /// Typed parent object.
     public weak private(set) var textView: UITextView?
+    
+    private var _beginEditingPublishSubject: PublishSubject<()>?
+    
+    internal var beginEditingPublishSubject: PublishSubject<()> {
+        if let subject = _beginEditingPublishSubject {
+            return subject
+        }
+        
+        let subject = PublishSubject<()>()
+        _beginEditingPublishSubject = subject
+        
+        return subject
+    }
 
     /// - parameter textview: Parent object for delegate proxy.
     public init(textView: UITextView) {
@@ -39,6 +52,11 @@ open class RxTextViewDelegateProxy
         return forwardToDelegate?.textView?(textView,
             shouldChangeTextIn: range,
             replacementText: text) ?? true
+    }
+    
+    @objc public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        _beginEditingPublishSubject?.onNext(())
+        return _forwardToDelegate?.textViewShouldBeginEditing?(textView) ?? true
     }
 }
 
